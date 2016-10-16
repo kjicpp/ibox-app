@@ -17,8 +17,8 @@ import com.google.api.services.drive.DriveScopes;
 
 public class GoogleDriveServiceProvider {
 
-	private static String CLIENT_ID = "PASTE_YOUR_CLIENT_ID_HERE";
-	private static String CLIENT_SECRET = "PASTE_YOUR_CLIENT_SECRET_HERE";
+	private static String CLIENT_ID = "392924810562-o7n7ecjtr468prjd8u8rj9lk3m7dfv1c.apps.googleusercontent.com";
+	private static String CLIENT_SECRET = "TQMuwWR4V67VFN1tGLTVIayz";
 
 	private static String REDIRECT_URI = "urn:ietf:wg:oauth:2.0:oob";
 
