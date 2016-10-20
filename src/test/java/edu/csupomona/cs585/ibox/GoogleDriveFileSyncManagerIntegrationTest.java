@@ -19,7 +19,7 @@ public class GoogleDriveFileSyncManagerIntegrationTest {
 	public File localFile;
 	public String localFileTitle, localFilePath;
 	
-	@Before 
+	//@Before 
 	public void setup() throws IOException {
 		
 		fSyncMan = new GoogleDriveFileSyncManager(GoogleDriveServiceProvider.get().getGoogleDriveClient());
@@ -29,7 +29,7 @@ public class GoogleDriveFileSyncManagerIntegrationTest {
 		localFileTitle = localFile.getName();
 	}
 	
-	 @Test
+	 //@Test
 	 public void testAddFile() throws IOException{
 		 System.out.println("***Test Add File*** ");
 		 try{
@@ -42,7 +42,7 @@ public class GoogleDriveFileSyncManagerIntegrationTest {
 		System.out.format("File %s added successfully\n\n", localFileTitle);
 	 }
 	 
-	 @Test
+	 //@Test
 	 public void testUpdateFile() throws IOException{
 		 System.out.println("***Test Update File*** ");
 		 try{
@@ -60,7 +60,7 @@ public class GoogleDriveFileSyncManagerIntegrationTest {
 		System.out.format("File %s updated successfully\n\n", localFileTitle);
 	 }
 	 
-	 @Test
+	 //@Test
 	 public void testDeleteFile() throws IOException{
 		 System.out.println("***Test Delete File***");
 		 try{

@@ -32,14 +32,26 @@
     	<artifactId>mockito-all</artifactId>
     	<version>1.9.5</version>
 	</dependency>
-    
+	 <!-- https://mvnrepository.com/artifact/com.google.api-client/google-api-client -->
+	<dependency>
+	    <groupId>com.google.api-client</groupId>
+	    <artifactId>google-api-client</artifactId>
+	    <version>1.22.0</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/com.google.oauth-client/google-oauth-client -->
+	<dependency>
+	    <groupId>com.google.oauth-client</groupId>
+	    <artifactId>google-oauth-client</artifactId>
+	    <version>1.22.0</version>
+    </dependency> 
   </dependencies>
 
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
+        <artifactId>maven-surefire-plugin</artifactId>
+		<version>2.9</version>
         <configuration>
           <!-- JDK version; If you are using higher version, free feel to update it. -->
           <source>1.7</source>
@@ -48,5 +60,37 @@
       </plugin>
     </plugins>
   </build>
-
+  <reporting>
+  	<plugins>
+  	    <plugin>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>cobertura-maven-plugin</artifactId>
+			<version>2.6</version>
+			<configuration>
+				<formats>
+					<format>html</format>
+					<format>xml</format>
+				</formats>
+			</configuration>
+	   </plugin>
+		<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-checkstyle-plugin</artifactId>
+			<version>2.13</version>
+			<reportSets>
+				<reportSet>
+					<reports>
+						<report>checkstyle</report>
+					</reports>
+				</reportSet>
+			</reportSets>
+		</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>3.0.4</version>
+			</plugin>	
+    </plugins>
+  </reporting>
 </project>
+	
